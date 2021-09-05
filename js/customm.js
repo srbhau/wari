@@ -50,34 +50,7 @@ $(document).ready(function(){
 	});
 	
 });
-/* play list music button */
-$(document).ready(function(){
-	
-	var obj = document.createElement("audio");
-	obj.src = "https://drive.google.com/file/d/1Y8q4zTFRnKk2qvXxwtQMCD7toyEH-C_A/view?usp=sharing";
-	obj.volume = 1;
-	obj.autoPlay = true;
-	obj.preLoad = true;       
-	
-	$('#playNowBtnn').click(function(e){
-		var $playNowButton = $(this);																/* button variable */
-		var $playlist = $playNowButton.parent().parent();						/* play list section class */
-		var $disk			= $playlist.children().children('.disk');			/* disk image */
-		
-		if ($disk.hasClass('rotating')) {
-			$disk.removeClass('rotating');
-			$playNowButton.children('i').removeClass('fa-pause').addClass('fa-play');
-			obj.pause();
-		} else {
-			
-			$playNowButton.children('i').removeClass('fa-play').addClass('fa-pause');
-			obj.play();
-		}
-		e.preventDefault();
-	});
-	
-});
- 
+
 /* *************************************** */
 // One page navigation 
 /* *************************************** */
