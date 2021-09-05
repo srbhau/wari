@@ -1,30 +1,4 @@
-/* play list music button */
-$(document).ready(function(){
-	
-	var obj = document.createElement("audio");
-	obj.src = "http://node-31.zeno.fm/80c86wkeb9quv?listening-from-radio-garden=1626593349752&rj-tok=AAABeriN_5MAa1OO_devhUtWIQ&rj-ttl=5";
-	obj.volume = 1;
-	obj.autoPlay = true;
-	obj.preLoad = true;       
-	
-	$('#playNowBtnn').click(function(e){
-		var $playNowButton = $(this);																/* button variable */
-		var $playlist = $playNowButton.parent().parent();						/* play list section class */
-		var $disk			= $playlist.children().children('.disk');			/* disk image */
-		
-		if ($disk.hasClass('rotating')) {
-			$disk.removeClass('rotating');
-			$playNowButton.children('i').removeClass('fa-pause').addClass('fa-play');
-			obj.pause();
-		} else {
-			$disk.addClass('rotating');
-			$playNowButton.children('i').removeClass('fa-play').addClass('fa-pause');
-			obj.play();
-		}
-		e.preventDefault();
-	});
-	
-});
+
 
 /* navigation menu animation with way points */
 
@@ -59,6 +33,33 @@ $(document).ready(function(){
 	obj.preLoad = true;       
 	
 	$('#playNowBtn').click(function(e){
+		var $playNowButton = $(this);																/* button variable */
+		var $playlist = $playNowButton.parent().parent();						/* play list section class */
+		var $disk			= $playlist.children().children('.disk');			/* disk image */
+		
+		if ($disk.hasClass('rotating')) {
+			$disk.removeClass('rotating');
+			$playNowButton.children('i').removeClass('fa-pause').addClass('fa-play');
+			obj.pause();
+		} else {
+			$disk.addClass('rotating');
+			$playNowButton.children('i').removeClass('fa-play').addClass('fa-pause');
+			obj.play();
+		}
+		e.preventDefault();
+	});
+	
+});
+/* play list music button */
+$(document).ready(function(){
+	
+	var obj = document.createElement("audio");
+	obj.src = "http://node-31.zeno.fm/80c86wkeb9quv?listening-from-radio-garden=1626593349752&rj-tok=AAABeriN_5MAa1OO_devhUtWIQ&rj-ttl=5";
+	obj.volume = 1;
+	obj.autoPlay = true;
+	obj.preLoad = true;       
+	
+	$('#playNowBtnn').click(function(e){
 		var $playNowButton = $(this);																/* button variable */
 		var $playlist = $playNowButton.parent().parent();						/* play list section class */
 		var $disk			= $playlist.children().children('.disk');			/* disk image */
