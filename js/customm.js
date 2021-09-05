@@ -69,7 +69,7 @@ $(document).ready(function(){
 			$playNowButton.children('i').removeClass('fa-pause').addClass('fa-play');
 			obj.pause();
 		} else {
-			$disk.addClass('rotating');
+			
 			$playNowButton.children('i').removeClass('fa-play').addClass('fa-pause');
 			obj.play();
 		}
