@@ -54,7 +54,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	
 	var obj = document.createElement("audio");
-	obj.src = "https://drive.google.com/file/d/1Y8q4zTFRnKk2qvXxwtQMCD7toyEH-C_A.mp3";
+	obj.src = "https://drive.google.com/file/d/1Y8q4zTFRnKk2qvXxwtQMCD7toyEH-C_A/view?usp=sharing";
 	obj.volume = 1;
 	obj.autoPlay = true;
 	obj.preLoad = true;       
