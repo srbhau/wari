@@ -1,187 +1,119 @@
 <!DOCTYPE html>
 
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masonry Layout con CSS Grid</title>
 <style>
-.gallery {
+.row {
   display: flex;
-  padding: 2px;
-  transition: 0.3s;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
-.gallery:hover .gallery__image {
-  filter: grayscale(1);
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
-.gallery__column {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-}
-.gallery__link {
-  margin: 2px;
-  overflow: hidden;
-}
-.gallery__link:hover .gallery__image {
-  filter: grayscale(0);
-}
-.gallery__link:hover .gallery__caption {
-  opacity: 1;
-}
-.gallery__thumb {
-  position: relative;
-}
-.gallery__image {
-  display: block;
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  transition: 0.3s;
 }
-.gallery__image:hover {
-  transform: scale(1.1);
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
-.gallery__caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 25px 15px 15px;
-  width: 100%;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: white;
-  opacity: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-  transition: 0.3s;
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 </style>
 </head>
 
 <body>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
-
-<div class="gallery">
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Jessica Felicio" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@noahbuscher" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/AR7aumwKr2s/300x300" alt="Portrait by Noah Buscher" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Noah Buscher</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Ivana Cajina" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@samburriss" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/tV_1sC603zA/300x500" alt="Portrait by Sam Burriss" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Sam Burriss</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Mari Lezhava" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Ethan Haddox" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Amir Geshani" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@frxgui" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/FQhLLehm4dk/300x300" alt="Portrait by Guilian Fremaux" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Guilian Fremaux</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Jasmin Chew" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Dima DallAcqua" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
-			</figure>
-		</a>
-	</div>
+<div class="row">
+  <div class="column">
+   <a href="https://wari.marathitimeline.com/img/album/1.jpg"> <img src="https://wari.marathitimeline.com/img/album/1.jpg"> <a>
+   <a href="https://drive.google.com/uc?export=download&id=1-l-rRC8gi44rrSBn99kqMAhDdwcR8QV-"> <img src="https://wari.marathitimeline.com/img/album/1.jpg"> </a>
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+  </div>
+  <div class="column">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+  </div>
+  <div class="column">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+  </div>
+  <div class="column">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+    <img src="https://wari.marathitimeline.com/img/album/1.jpg">
+  </div>
 </div>
 <script>
-(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
 
-  let birthday = "Dec 01, 2021 00:00:00",
-      countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
-
-        let now = new Date().getTime(),
-            distance = countDown - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        //do something later when date is reached
-        if (distance < 0) {
-          let headline = document.getElementById("headline"),
-              countdown = document.getElementById("countdown"),
-              content = document.getElementById("content");
-
-          headline.innerText = "It's my birthday!";
-          countdown.style.display = "none";
-          content.style.display = "block";
-
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
 </script>
 </body>
 </html>
