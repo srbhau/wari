@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #d3d3d3;  //background color
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+</style>
+</head>
+
+<body>
+
+
+
+
+<ul class="cards">
+  <li>
+    <a href="https://wari.marathitimeline.com/indexx.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">श्री सिद्धिविनायक </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="https://wari.marathitimeline.com/indexxx.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/dy2.jpg" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title"> श्री साई शिर्डी </h3>
+            <span class="card__status"> 24 तास चालू</span>
+          </div>
+        </div>
+        <p class="card__description">24 तास ऑडिओ ज्ञानेश्वरी पारायण रेडियो</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="https://apigw.jio.ril.com/hlsplayer/?w=676&h=380&url=https://rcpems02.jio.ril.com/videofeed.cdn.ril.com/LordShri_Vitthal/LordShri_Vitthal_400.m3u8?cdt=xfctPaVzwnj1-V2VZ6Nrtg&exp=1590000000" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/livee.png" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">श्री विठ्ठल रुख्मिणी</h3>
+                 
+            <span class="card__status">24 तास चालू</span>
+          </div>
+        </div>
+        <p class="card__description">10 पेक्षा आधिक देवी देवतांची मोफत live दर्शन सुविधा</p>  
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="https://apigw.jio.ril.com/osmanabad-player/?w=580&h=326&url=https://rcpems02.jio.ril.com/videofeed.cdn.ril.com/Tulja_Bhavani/Tulja_Bhavani_600.m3u8?cdt=ld9mx1QCVFS8sqls8x1rug&exp=1560000000" class="card">
+      <img src="https://i.pinimg.com/originals/db/ee/c4/dbeec44598d3e2d19c0611aa5bd9ee95.jpg" class="card__image" alt="" /> 
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">श्री अंबाबाई तुळजापूर</h3>
+            <span class="card__status">मोबाइल वॉलपेपर </span>
+          </div>          
+        </div>
+        <p class="card__description">मोबाइल वॉलपेपर डाऊनलोड करा</p>
+      </div>
+    </a>
+  </li>   
+<li>
+    <a href="https://apigw.jio.ril.com/hlsplayer/?w=676&h=380&url=https://rcpems02.jio.ril.com/videofeed.cdn.ril.com/Ambabai_Temple/Ambabai_Temple_600.m3u8?cdt=l8oneTjOr-fQVBXyWUkEng&exp=1604000000" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">श्री महालक्ष्मी कोल्हापूर </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://marathitimeline.blogspot.com/p/blog-page_75.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">महकालेश्वर उज्जैन </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://www.marathitimeline.com/p/somnath-live-darshan-marathi-timeline.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">श्री सोमनाथ मंदिर</h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://marathitimeline.com/p/blog-page_13.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">काशी विश्वनाथ </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://wari.marathitimeline.com/indexx.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">आई एकवीरा देवी </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://marathitimeline.com/p/blog-page_76.html?m=1" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">इस्कॉन वृंदावन </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li>
+<li>
+    <a href="https://wari.marathitimeline.com/indexx.html" class="card">
+      <img src="https://wari.marathitimeline.com/img/album/1.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://wari.marathitimeline.com/img/album/wariilogo.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">अभंग रेडियो </h3>            
+            <span class="card__status">24 तास चालू </span>
+          </div>
+        </div>
+        <p class="card__description">तुम्हाला येथे लोकप्रिय अभंग ऑडिओ स्वरुपात ऐकायला मिळतील.</p>
+      </div>
+    </a>      
+  </li> 
+</ul>
+</body>
+</html>
