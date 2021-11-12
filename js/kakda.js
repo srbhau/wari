@@ -27,7 +27,7 @@ $('.nav li a').bind('click', function(e){
 $(document).ready(function(){
 	
 	var obj = document.createElement("audio");
-	obj.src = "https://node-22.zeno.fm/76qx1szzba9uv?rj-ttl=5&rj-tok=AAABfODP7tYA23ZwnYUAn945Kw";
+	obj.src = "https://node-21.zeno.fm/f0sw1hzzba9uv?rj-ttl=5&rj-tok=AAABfRI2IugA77mB6vArbRO4Eg";
 	obj.volume = 1;
 	obj.autoPlay = true;
 	obj.preLoad = true;       
