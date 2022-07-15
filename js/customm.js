@@ -27,7 +27,7 @@ $('.nav li a').bind('click', function(e){
 $(document).ready(function(){
 	
 	var obj = document.createElement("audio");
-	obj.src = "http://node-20.zeno.fm/qvssvt2r8druv?listening-from-radio-garden=1630647083&rj-tok=AAABe6otC_YAvI8n29ulKqesng&rj-ttl=5";
+	obj.src = "http://node-27.zeno.fm/4nd3za5gmxhvv?zs=-3WCL67TSpeW_vq_NoRoFA&rj-tok=AAABggCXhXUAzZ2wNoQJMOVNNQ&rj-ttl=5";
 	obj.volume = 1;
 	obj.autoPlay = true;
 	obj.preLoad = true;       
