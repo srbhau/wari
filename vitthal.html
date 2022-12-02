@@ -1,284 +1,148 @@
 
-<!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-
-<html>
-	<head>
-		
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Live Darshan</title>
-		<link rel="stylesheet" href="css/main.css" />
-
-   <script type="text/javascript" src="js/jquery.js"></script>
-   <script type="text/javascript" src="js/functions.js"></script>
-   <script type="text/javascript" src="js/swfobject.js"></script>
-   
-<style>
-
-
-#container { display:block; }
-
-@media only screen and (orientation:landscape){
-
-  #container {
-
-     -webkit-transform: rotate(0deg);
-
-     -moz-transform: rotate(0deg);
-
-     -o-transform: rotate(0deg);
-
-     -ms-transform: rotate(0deg);
-
-     transform: rotate(0deg);
-
-  }
-
-}
-.title{float: left;
-    padding: 0;}
-.marathi{margin:0 auto; display:block; float:right; background: #c9590a;-moz-box-shadow: 6px 6px 5px #999;	font-weight: bold; padding:6px; width:100px;  cursor: pointer;color: white !important; border-radius: 10px; border: 1px solid  #c9590a;font-size: 90%;}
-.post > header .title {
-    padding: 9px 10px 0px 10px;
-}
-.post {
-    padding: 0 20px;
-    /* background: #822329; */
-    /* border: solid 1px rgba(160, 160, 160, 0.3); */
-    margin: 0 0 3em 0;
-    position: relative;
-}
-.post{margin: 0 0 0em 0;}
-.post > header {margin-bottom:0;}
-</style>
-   
-	</head>
-	<body id="container" onload="onLoad()"  class="appbg">
-
-		<!-- Wrapper -->
-			<div id="wrapper" >
-
-				<!-- Header -->
-					<header id="header">
-						<h1 style="font-size: 18px;><a href="#">Vitthal Rukmini Live Darshan </a></h1>
-						
-						<nav class="main" >
-							<ul>
-							<!--	<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>-->
-								<li class="menu">
-									<a class="fa-bars" href="#menu" style="color:#fff !important;">Menu</a>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<section id="menu" style="color: #fff;">
-
-						<!-- Links -->
-						<section>
-								<ul class="links">
-									<li>
-										<a href="index.html">
-											<h3 style="font-size: 18px;">Vitthal Rukmini Live Darshan</h3>
-										<!--	<p>Feugiat tempus veroeros dolor</p>-->
-										</a>
-									</li>	
-																		
-									<li>
-										<a href="about_pandurang.html">
-											<h3 style="font-size: 18px;">Shree Pandurang</h3>
-										<!--	<p>Phasellus sed ultricies mi congue</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="about_rukmini.html">
-											<h3 style="font-size: 18px;">Shree Rukmini</h3>
-										<!--	<p>Sed vitae justo condimentum</p>-->
-										</a>
-									</li>
-							
-									<li>
-										<a href="pariwar.html">
-											<h3 style="font-size: 18px;">Pariwar Devata</h3>
-										<!--	<p>Sed vitae justo condimentum</p>-->
-										</a>
-									</li>
-																		<li>
-										<a href="bniwas.html">
-											<h3 style="font-size: 18px;">Bhakt Niwas</h3>
-										<!--	<p>Sed vitae justo condimentum</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="trustee.html">
-											<h3 style="font-size: 18px;">Committee Member</h3>
-										<!--	<p>Sed vitae justo condimentum</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="donation.html">
-											<h3 style="font-size: 18px;">Online Donation</h3>
-										<!--	<p>Sed vitae justo condimentum</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="how_to_reach.html">
-											<h3 style="font-size: 18px;">How to Reach</h3>
-										<!--	<p>Phasellus sed ultricies mi congue</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="map.html">
-											<h3 style="font-size: 18px;">Map</h3>
-										<!--	<p>Phasellus sed ultricies mi congue</p>-->
-										</a>
-									</li>
-									
-									
-									<li>
-										<a href="contactus.html">
-											<h3 style="font-size: 18px;">Contact Us</h3>
-										<!--	<p>Phasellus sed ultricies mi congue</p>-->
-										</a>
-									</li>
-									<li>
-										<a href="feedback.html">
-											<h3 style="font-size: 18px;">Feedback</h3>
-										<!--	<p>Phasellus sed ultricies mi congue</p>-->
-										</a>
-									</li>
-										<li>
-										<a  href="https://play.google.com/store/apps/details?id=com.smac.vitthallive">
-											<h3 style="font-size: 18px;">Share App</h3>
-										<!--	<p>Porta lectus amet ultricies</p>-->
-										</a>
-									</li>
-									
-								</ul>
-							</section>
-					
-					</section>
-
-				<!-- Main -->
-					<div id="main" style="padding-top: 55px;">
-
-						
-						<article class="post">
-								<header>
-									<div class="title">
-									
-									<button class="marathi" onclick="checklang(); return false"> मराठी
-									</button>
-									
-									<h2 style="float:left;">Live Darshan</h2>
-										
-									</div>
-								
-									 
-									  <!--<a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code </a>
-                                       <a href="intent://com.primedatamatics.vlab/#Intent;scheme=primevlab;package=demo.linktop.health;end"> Vlab </a>  -->
-								</header>
-								
-							
-				<div id="bg_player_location" style="visibility: visible;overflow-x:scroll;">
-
-<!--<a id="play-video" href="#">Play Video</a>-->
- 
-<iframe height="470" width="700" style="overflow-x: scroll;"  src="https://apigw.jio.ril.com/hlsplayer/?w=365&h=175&url=https://cdndp.cdn.jio.com/LordShri_Vitthal/LordShri_Vitthal_400.m3u8?cdt=xfctPaVzwnj1-V2VZ6Nrtg&exp=1590000000" frameborder="2" scrolling="no" autoplay="1" allowfullscreen ></iframe>
-<!--<img src="http://player.bc.cdn.bitgravity.com/universalurl/play.png" alt="CLICK TO PLAY" border="0">-->
-
-
-
-</div>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
-		
-		
+  <title>:: Vitthal Rukmini Mandir
+:: Vitthal Rukmini Online Darshan,Live Darshan,Pandharpur</title>
+  <script type="text/javascript"
+ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
-			<!--<button style="margin:0 auto;display:block;" onclick="goFullscreen('playeriframe'); return false">
-  View Fullscreen!
-</button>-->
-				
-				
-				
-			
-
-						        
-							
-							</article>
-
-					</div>	
-
-				
-					
-				
-
-				
-<p style="text-align: center;
-    font-size: 13px;
-    font-weight: bold;">For Better View Please Check in Landscape Mode</p>
-			</div>
-
-		<!-- Scripts -->
-		    <script src="js/jquery.min.js"></script>
-			<script src="js/skel.min.js"></script>
-			<script src="js/util.js"></script>
-			
-			<script src="js/main.js"></script>
-			
-			 <script>
-			
-			function checklang(){
-			
-			 window.location.href = 'index_m.html';
-			}
-			function onLoad()
-		     {
-		 
-		        document.addEventListener("deviceready", onDeviceReady, false);
-		     }
-		   function onDeviceReady() 
-		    {
-		         document.addEventListener("backbutton", onBackKeyDown, false);
-		    }
-		
-		     function onBackKeyDown()
-		     {
-		        
-		          navigator.app.exitApp();
-		     }
-		     
-		     </script>
-		     
-		     
-		     	<script type="text/javascript">
-function goFullscreen(id) {
-  var element = document.getElementById(id);       
-  if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if (element.webkitRequestFullScreen) { 
-    element.webkitRequestFullScreen();
-  }  
-}
-
-
-</script>
-
-
-
-		     
-		     
-
-	</body>
+  <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="990" cellspacing="0" cellpadding="0" border="0" bgcolor="#331600" align="center"> 
+  <tbody> 
+    <tr> 
+      <td valign="top" align="left"> 
+        <table width="990" cellspacing="0" cellpadding="0" border="0" align="left"> 
+          <tbody> 
+            <tr> 
+              <td valign="middle" align="left" height="64" class="topbg"> 
+                <div style="width: 960px; margin: auto;"> <marquee align="middle" direction="left" behavior="alternate" scrolldelay="190" class="marquee">||जय जय राम कृष्ण हरी|| &nbsp;&nbsp;&nbsp;&nbsp;   ||जय जय राम कृष्ण||जय जय राम कृष्ण राम कृष्ण हरी||&nbsp;&nbsp;&nbsp;&nbsp;||जय जय राम कृष्ण हरी||&nbsp;&nbsp;&nbsp;&nbsp;||जय जय राम कृष्ण हरी||&nbsp;&nbsp;&nbsp;&nbsp;||जय जय राम कृष्ण हरी||</marquee> 
+                </div> </td> 
+            </tr> 
+            <tr> 
+              <td valign="top" align="left"></td> 
+            </tr> 
+            <tr> 
+              <td width="990" valign="top" bgcolor="#e3e1d2" align="left"><img width="990" height="293" alt="" src="images/header1.jpg" /></td> 
+            </tr> 
+          </tbody> 
+        </table> </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" align="left"> 
+        <table width="990" cellspacing="0" cellpadding="0" border="0"> 
+          <tbody> 
+            <tr> 
+              <td width="200" valign="top" align="left"> 
+                <table width="100%" cellspacing="0" cellpadding="0" align="center"> 
+                  <tbody> 
+                    <tr> 
+                      <td valign="top" align="left" class="menubg"><img alt="" src="images/menu-top.gif" /></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left" class="menubg"> 
+                        <div class="arrowlistmenu"> <h3 class="menuheader expandable">अनुक्रमणिका</h3> 
+                          <ul class="categoryitems"> 
+                            <li><a href="home.html"> मुख्य पान </a></li> 
+                            <li><a href="panduranga.html">श्रीपांडुरंग </a></li> 
+                            <li><a href="rukmini.html"> श्रीरुक्मिणी </a></li> 
+                            <li><a href="pandhari.html">पंढरी महिमा </a></li> 
+                            <li><a href="vari.html"> वारी</a></li> 
+                            <li><a href="gallery.html">फोटो संच </a></li> 
+                            <li><a href="howToReach.html">कसे याल?</a></li> 
+                            <li><a href="map.html">नकाशा</a></li> 
+                            <li><a href="places.html">काय पहाल? </a></li> 
+                            <li><a href="nivas.html">निवास व्यवस्था </a></li> 
+                          </ul> <h3 class="menuheader expandable">महत्वाचे</h3> 
+                          <ul class="categoryitems"> 
+                            <li><a href="dinakram.html">दिनक्रम</a></li> 
+                            <li><a href="yojana.html">मंदिर योजना</a></li> 
+                            <li><a target="_blank" href="mandirSamitiAct.htm">टेंपल ऍक्ट, १९७३</a></li> 
+                            <li><a href="phone.html"> फोन क्रमांक</a></li> 
+                          </ul> <h3 class="menuheader expandable">ऑनलाईन
+सुविधा</h3> 
+                          <ul class="categoryitems"> 
+                            <li><a href="#">विठ्ठल दर्शन</a></li> 
+                            <li><a href="onlineDarshan1.html">रुक्मिणी दर्शन</a></li> 
+                            <li><a href="onlineDonation.html">ऑनलाईन डोनेशन</a></li> 
+                          </ul> <h3 class="menuheader expandable">संपर्क
+करा</h3> 
+                          <ul class="categoryitems"> 
+                            <li><a href="contact.html">संपर्क करा</a></li> 
+                            <li><a href="feedback.html">प्रतिक्रिया</a></li> 
+                          </ul> 
+                        </div> </td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left"><img width="200" height="46" alt="" src="images/menu-bottom.gif" /></td> 
+                    </tr> 
+                  </tbody> 
+                </table> </td> 
+              <td width="588" valign="top" align="center"> 
+                <table width="586" cellspacing="0" cellpadding="0" border="0" align="center"> 
+                  <tbody> 
+                    <tr> 
+                      <td width="528" valign="top" align="left" class="midbg"><img width="586" height="32" alt="" src="images/middle-top.gif" /></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left" class="midbg"> 
+                        <div style="padding: 15px;"> 
+                          <div id="content0" style="left: 0px; top: 15px; width: 550px; height: 584px;" class="style1"> 
+                            <div> <h3 align="center" class="style56"><strong>सदर ऑनलाईन दर्शन सेवा श्री.विठ्ठल रुक्मिणी मंदिरे समिती, पंढरपूर यांच्या द्वारे दिली जात आहे </strong></h3>
+       <div> <h4 align="center" class="style56"><strong>Note: Shri Vitthal Rukmini live darshan also available on Jio TV in Devotional category & Marathi Language </strong></h2>
+<div> <h4 align="center" class="style56"><strong>इथे ऑनलाईन दर्शन सेवा बंद असल्यास किवा काही तांत्रिक अडचण येत असल्यास आपण गुगल प्ले स्टोअर मध्ये " श्री विठ्ठल रुक्मिणी देवस्थान पंढरपूर या अप्लिकेशन वर ही सेवा पाहू शकता </strong>
+ <br/> 
+	<li> </li> 
+	
+	
+<iframe height="175" width="365" src="https://apigw.jio.ril.com/hlsplayer/?w=365&h=175&url=https://cdndp.cdn.jio.com/LordShri_Vitthal/LordShri_Vitthal_400.m3u8?cdt=xfctPaVzwnj1-V2VZ6Nrtg&exp=1590000000" frameborder="2" scrolling="no" autoplay="1" allowfullscreen>
+ 
+	
+                            
+                          </div> 
+                        </div> </td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left"><img width="586" height="32" alt="" src="images/middle-bottom.gif" /></td> 
+                    </tr> 
+                  </tbody> 
+                </table> </td> 
+              <td width="200" valign="top" align="left"> 
+                <table width="100%" cellspacing="0" cellpadding="0" align="center"> 
+                  <tbody> 
+                    <tr> 
+                      <td valign="top" align="left" class="menubg"><img alt="" src="images/menu-top.gif" /></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left" class="menubg"> 
+                        <div class="arrowlistmenu"> <h3 class="menuheader expandable">ताज्या बातम्या</h3> 
+                          <ul class="categoryitems"> 
+                            <li><a href="news.html">॥ मार्गशीर्ष उत्सव ॥</a></li><a href="news.html"></a> 
+                          </ul><a href="gallery.html"> <h3 class="menuheader expandable">फोटो गॅलरी</h3> </a> 
+                          <div><a href="gallery.html"> <object width="125" height="126" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"> <param name="movie" value="images/gallery.swf"></param> <param name="quality" value="high"></param> <embed width="125" height="126" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" type="application/x-shockwave-flash" src="/spaw/empty/images/gallery.swf"></embed> </object></a> 
+                          </div> 
+                        </div> </td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top" align="left"><img width="200" height="46" alt="" src="images/menu-bottom.gif" /></td> 
+                    </tr> 
+                  </tbody> 
+                </table> </td> 
+            </tr> 
+          </tbody> 
+        </table> </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" align="left" height="5"></td> 
+    </tr> 
+    <tr> 
+      <td valign="middle" align="center" height="64" colspan="3" class="bottombg footer">All rights reserved.
+Copyright © Vitthal Rukmini Mandir Samiti, Pandharpur.<a target="_blank" href="tandc.html">Terms and Conditions</a></td> 
+    </tr> 
+  </tbody> 
+</table> </body>
 </html>
