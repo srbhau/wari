@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 
 <head>
-  
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "351c4fd7-7109-4b38-83c5-4841006d7874",
+      safari_web_id: "web.onesignal.auto.5b1b15a7-d107-41ff-b02e-c379c8847bd2",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 <style>
 :root {
   --surface-color: #fff;
